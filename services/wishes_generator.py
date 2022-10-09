@@ -7,8 +7,6 @@ class WishesGenerator:
     def __init__(self, repository: WishesRepository):
         self._logger = logging.getLogger()
         self._repository = repository
-        self._repository.connect()
-        self._repository.create_database_and_tables_if_not_exist()
 
     def get_simple_wish(self):
         # Извлечь из БД и создать простое поздравление
