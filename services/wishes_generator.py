@@ -9,6 +9,7 @@ class WishesGenerator:
         self._repository = repository
 
     def get_simple_wish(self):
+
         # Извлечь из БД и создать простое поздравление
         raise Exception("Not implemented")
 

@@ -15,7 +15,8 @@ logging.basicConfig(
 if __name__ == '__main__':
     # initialize database
     wish_repository = WishesRepository(PSQL_CONNECTION_STRING)
-    wishes_generator = WishesGenerator(wish_repository)
+    wish_repository.get_content_by_table("dear", 2, True)
+    # wishes_generator = WishesGenerator(wish_repository)
 
     # start
-    telegram_bot = TelegramIntegrations(TOKEN, wishes_generator).initialize().run()
+    # telegram_bot = TelegramIntegrations(TOKEN, wishes_generator).initialize().run()
